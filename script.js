@@ -295,3 +295,19 @@ document.addEventListener('DOMContentLoaded', function() {
     setupSmoothScrolling();
     updateCopyrightYear();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+});

@@ -90,6 +90,24 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 767px) {
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        background-color: #111827;
+        padding: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links a {
+        padding: 1rem;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 650px;
